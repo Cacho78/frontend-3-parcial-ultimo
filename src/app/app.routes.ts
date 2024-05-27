@@ -19,6 +19,35 @@ export const routes: Routes = [
         loadChildren: () => import('./views/dashboard/routes').then((m) => m.routes)
       },
       {
+        path: 'automovil',
+        loadChildren: () => import('./views/automovil/routes').then((m) => m.routes)
+      },
+    ]
+  },
+      { children: [
+       {
+        path: '',
+        redirectTo: 'cards',
+        pathMatch: 'full'
+       },
+       {
+        path: 'accordion',
+        loadComponent: () => import('./accordion/accordions.component').then(m => m.AccordionsComponent),
+        data: {
+          title: 'Accordion'
+        }
+        },
+
+        
+    
+      {
+        path: 'breadcrumbs',
+        loadComponent: () => import('./breadcrumbs/breadcrumbs.component').then(m => m.BreadcrumbsComponent),
+        data: {
+          title: 'Breadcrumbs'
+        }
+      },
+      {
         path: 'theme',
         loadChildren: () => import('./views/theme/routes').then((m) => m.routes)
       },
@@ -54,7 +83,7 @@ export const routes: Routes = [
         path: 'pages',
         loadChildren: () => import('./views/pages/routes').then((m) => m.routes)
       }
-    ]
+       ]
   },
   {
     path: '404',
@@ -84,5 +113,5 @@ export const routes: Routes = [
       title: 'Register Page'
     }
   },
-  { path: '**', redirectTo: 'dashboard' }
+  { path: '**', redirectTo: 'dashboard' },
 ];

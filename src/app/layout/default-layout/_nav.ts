@@ -10,6 +10,33 @@ export const navItems: INavData[] = [
       text: 'NEW'
     }
   },
+  /////--------------autos inicio
+
+  {
+    title: true,
+    name: 'Bienbenido'
+  },
+
+  {
+    name: 'Automovils',
+    url: '/automovil',
+    iconComponent: { name: 'cil-puzzle' },
+  children: [
+    {
+      name: 'Autos',
+      url: '/automovil/autos',
+      icon: 'nav-icon-bullet'
+    },
+
+    {
+    name: 'Reportes',
+    url: '/automovil/reportes',
+    icon: 'nav-icon-bullet'
+    },
+  ],
+    },
+
+  /////--------------autos final
   {
     title: true,
     name: 'Theme'
