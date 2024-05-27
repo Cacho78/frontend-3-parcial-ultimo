@@ -13,7 +13,7 @@ export const routes: Routes = [
         },
         {
           path: 'autos',
-          loadComponent: () => import('./autos/autos.component').them(m => m.Autoscomponent),
+          loadComponent: () => import('./autos/autos.component').then(m => m.AutosComponent),
           data: {
             title: 'Autos'
           }

@@ -14,7 +14,7 @@ export const navItems: INavData[] = [
 
   {
     title: true,
-    name: 'Bienbenido'
+    name: 'automobil'
   },
 
   {
@@ -23,13 +23,13 @@ export const navItems: INavData[] = [
     iconComponent: { name: 'cil-puzzle' },
   children: [
     {
-      name: 'Autos',
+      name: 'autos',
       url: '/automovil/autos',
       icon: 'nav-icon-bullet'
     },
 
     {
-    name: 'Reportes',
+    name: 'reportes',
     url: '/automovil/reportes',
     icon: 'nav-icon-bullet'
     },
