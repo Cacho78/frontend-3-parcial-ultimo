@@ -1,108 +1,105 @@
+
 <c-row ngPreserveWhitespaces>
-    <c-col xs="12">
-                    <c-card class="mb-4">
-                <c-card-header>
-                  <strong>Formulario de automovil</strong>
-                </c-card-header>
-                <c-card-body>
-                                     <form cForm>
-                      <div class="mb-3">
-                        <label cLabel for="nombre">Nombre</label>
-                        <input cFormControl
-                               id="nombre"
-                               placeholder="ingrese nombre"
-                               type="text"
-                        />
-                      </div>
-                      <div class="mb-3">
-                        <label cLabel for="universidad">Universidad</label>
-                        <input cFormControl
-                               id="universidad"
-                               placeholder="ingrese universidad"
-                               type="text"
-                        />
-                      </div>
-                      <div class="mb-3">
-                        <label cLabel for="docente">Docente</label>
-                        <input cFormControl
-                               id="docente"
-                               placeholder="ingrese docente"
-                               type="text"
-                        />
-                      </div>
-                      <div class="mb-3">
-                        <label cLabel for="materia">materia</label>
-                        <input cFormControl
-                               id="materia"
-                               placeholder="ingrese materia"
-                               type="text"
-                        />
-                      </div>
-                      <div class="mb-3">
-                        <label cLabel for="año">año</label>
-                        <input cFormControl
-                               id="año"
-                               placeholder="ingrese año"
-                               type="number"
-                        />
-                      </div>
-                      <div class="mb-3">
-                        <label cLabel for="empresa">empresa</label>
-                        <input cFormControl
-                               id="empresa"
-                               placeholder="ingrese empresa"
-                               type="text"
-                        />
-                      </div>
-                      <div class="mb-3">
-                        <label cLabel for="usuario">usuario</label>
-                        <select aria-label="seleccione usuario" cSelect>
-                            <option>Open this select menu</option>
-                            <option value="1">Maria Isabel Fernholz Soto de Montero</option>
-                            <option value="2">carlos montero</option>
-                            <option value="3">1 Carlos montero pantoja</option>
-                          </select>
-                        />
-                      </div>
-                      <button cButton class="me-1" color="primary" type="submit">
-                        Guardar
-                      </button>
-                      
-                    </form>
-                                </c-card-body>
-              </c-card>
-            </c-col>
-            <c-col xs="12">
-                <table cTable>
-                    <thead>
-                        <thead>
-                            <tr>
-                              <th scope="col">#</th>
-                              <th scope="col">universidad</th>
-                              <th scope="col">nombre</th>
-                              <th scope="col">docente</th>
-                              <th scope="col">materia</th>
-                              <th scope="col">año</th>
-                              <th scope="col">empresa</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                              <th scope="row">1</th>
-                              <td>Mark</td>
-                              <td>Otto</td>
-                              <td>Mark</td>
-                              <td>Otto</td>
-                              <td>Mark</td>
-                              <td>Otto</td>
-                              <button cButton color="Warning" variant="outline">editar</button>
-                              <button cButton color="danger" variant="outline">eliminar</button>
-                            </tr>
-                         </tbody>
-                          </table>
-            </c-col>
+  <c-col xs="12">
+                  <c-card class="mb-4">
+              <c-card-header>
+                <strong>Formulario de automovil</strong>
+              </c-card-header>
+              <c-card-body>
+                                   <form cForm>
+                    <div class="mb-3">
+                      <label cLabel for="nombre">Nombre</label>
+                      <input cFormControl
+                             id="nombre"
+                             placeholder="ingrese nombre"
+                             type="text"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label cLabel for="universidad">Universidad</label>
+                      <input cFormControl
+                             id="universidad"
+                             placeholder="ingrese universidad"
+                             type="text"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label cLabel for="docente">Docente</label>
+                      <input cFormControl
+                             id="docente"
+                             placeholder="ingrese docente"
+                             type="text"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label cLabel for="materia">materia</label>
+                      <input cFormControl
+                             id="materia"
+                             placeholder="ingrese materia"
+                             type="text"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label cLabel for="año">año</label>
+                      <input cFormControl
+                             id="año"
+                             placeholder="ingrese año"
+                             type="number"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label cLabel for="empresa">empresa</label>
+                      <input cFormControl
+                             id="empresa"
+                             placeholder="ingrese empresa"
+                             type="text"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label cLabel for="usuario">usuario</label>
+                      <select aria-label="seleccione usuario" cSelect>
+                          <option>Open this select menu</option>
+                          <option value="1">Maria Isabel Fernholz Soto de Montero</option>
+                          <option value="2">carlos montero</option>
+                          <option value="3">1 Carlos montero pantoja</option>
+                        </select>
+                                          </div>
+                    <button cButton class="me-1" color="primary" type="submit">
+                      Guardar
+                    </button>
+                    
+                  </form>
+                              </c-card-body>
+            </c-card>
+          </c-col>
+          <c-col xs="12">
+              <table cTable>
+                  <thead>
+                      <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">universidad</th>
+                            <th scope="col">nombre</th>
+                            <th scope="col">docente</th>
+                            <th scope="col">materia</th>
+                            <th scope="col">año</th>
+                            <th scope="col">empresa</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                            @for( a of listadeautos ;track a;) {
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>{{a.universidad}}</td>
+                            <td>{{a.nombre}}</td>
+                            <td>{{a.docente}}</td>
+                            <td>{{a.materia}}</td>
+                            <!-- <td>{{a.año}}</td> -->
+                            <td>{{a.empresa}}</td>
+                            <button cButton color="Warning" variant="outline">editar</button>
+                            <button cButton color="danger" variant="outline">eliminar</button>
+                          </tr>}
+                       </tbody>
+                        </table>
+          </c-col>
 </c-row>
-
-            
-    
-
