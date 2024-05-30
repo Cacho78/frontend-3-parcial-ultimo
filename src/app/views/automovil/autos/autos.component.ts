@@ -23,7 +23,7 @@ export class AutosComponent{
    
     }
 postcrear(){
-
+ console.log(this.autosModel);
 this.autosService.agregar(this.autosModel).subscribe({
   next : (respuesta) => {
 
